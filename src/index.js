@@ -5,12 +5,12 @@ module.exports = function getZerosCount(number) {
   }
   for (let i = number; i > 1; i--){
     temp = i;
-    while(Math.floor(temp % 5) == 0) {
-      temp = Math.floor(temp/5);
+    while(temp % 5 == 0) {
+      temp /= 5;
       fives++;
     }
-    while(Math.floor(temp % 2) == 0) {
-      temp = Math.floor(temp/2);
+    while(temp % 2 == 0) {
+      temp = temp >> 1;
       twos++;
     }
   }
