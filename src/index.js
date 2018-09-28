@@ -1,5 +1,5 @@
 module.exports = function getZerosCount(number) {
-  let twos = 0, fives = 0, temp;
+  let fives = 0, temp;
   if(number <= 3) {
     return count;
   }
@@ -9,10 +9,6 @@ module.exports = function getZerosCount(number) {
       temp /= 5;
       fives++;
     }
-    while(temp % 2 == 0) {
-      temp = temp >> 1;
-      twos++;
-    }
   }
-  return Math.min(fives, twos);
+  return fives;
 }
